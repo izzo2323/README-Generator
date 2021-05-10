@@ -6,10 +6,36 @@ const questions = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'projectName',
-            message: 'What is the name of your Project? (Required)',
+            name: 'name',
+            message: 'What is your name? (Required)',
             validate: (nameInput) => {
                 if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your name!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'githubname',
+            message: 'What is your GitHub username?',
+            validate: (githubname) => {
+                if (githubname) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub username!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'projectname',
+            message: 'What is the name of your Project? (Required)',
+            validate: (projectNameInput) => {
+                if (projectNameInput) {
                     return true;
                 } else {
                     console.log('Please enter a Project Name!');
@@ -17,6 +43,19 @@ const questions = () => {
                 }
             }
         },
+        {
+            input: 'input',
+            name: 'description',
+            message:'Please enter a description of your project.',
+            validate: descriptioninput => {
+                if (descriptioninput) {
+                    return true;
+                } else {
+                    console.log('Please enter a description!');
+                    return false;
+                }
+            }
+        }
 
     ])
 }
@@ -29,3 +68,5 @@ function init() {}
 
 // Function call to initialize app
 init(questions);
+
+questions();
