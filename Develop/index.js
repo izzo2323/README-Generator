@@ -20,12 +20,25 @@ const questions = () => {
         {
             type: 'input',
             name: 'githubname',
-            message: 'What is your GitHub username?',
+            message: 'What is your GitHub username? (Required)',
             validate: (githubname) => {
                 if (githubname) {
                     return true;
                 } else {
                     console.log('Please enter your GitHub username!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter your email. (Required)',
+            validate: (email) => {
+                if (email) {
+                    return true;
+                } else {
+                    console.log('Please enter your email!');
                     return false;
                 }
             }
@@ -44,9 +57,9 @@ const questions = () => {
             }
         },
         {
-            input: 'input',
+            type: 'input',
             name: 'description',
-            message:'Please enter a description of your project.',
+            message: 'Please enter a description of your project. (Required)',
             validate: descriptioninput => {
                 if (descriptioninput) {
                     return true;
@@ -55,16 +68,47 @@ const questions = () => {
                     return false;
                 }
             }
-        }
+        },
+        {
+            type: 'input',
+            name: 'install',
+            message: 'What infomation is to install and run the program?',
+            // velidate: installinput => {
+            //     if (installinput) {
+            //         return true;
+            //     } else {
+            //         console.log('Please list installation instructions!'),
+            //         return false;
+            //     }
+            // }
+        },
+        {
+            type: 'checkbox',
+            name: 'license',
+            message: 'Please enter any licenses your project has.',
+            choices: ['MIT', 'GPLv2', 'GPLv3', 'Apache', 'other', 'none'],
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'What information is needed about using this program?'
+        },
+        {
+            type: 'input',
+            name: 'contribute',
+            message: 'What information is needed about contributing to the project?'
+        },
+
+
 
     ])
 }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() { }
 
 // Function call to initialize app
 init(questions);
