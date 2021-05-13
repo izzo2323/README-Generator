@@ -99,6 +99,11 @@ const questions =
             name: 'contribute',
             message: 'What information is needed about contributing to the project?'
         },
+        // {
+        //     type: 'input'
+        //     name: 'testing'
+        //     message: 'What informa'
+        // },
 
 
 
