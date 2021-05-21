@@ -123,6 +123,3 @@ function init() {
 
 // Function call to initialize app
 init();
-
-// let answers = questions();
-// console.log(answers)
