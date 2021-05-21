@@ -1,7 +1,7 @@
 # README Generator
 
   ## Description 
-  This application was developed to make the process of creating a detailed and perfectly styled README as user friendly as possible
+  This application was developed to make the process of generating a perfectly formatted README for GitHub a breeze.
 
   ## Table of Contents
   - [Description](#Description)
@@ -13,10 +13,10 @@
   - [Questions](#Questions)
 
   ## Installation 
-  Clone the repository and run npm install
+  Simply clone the repository to your machine, move to the correct directory, and run the command npm install
 
   ## Usage
-  Once cloned and npm install is run the program is launched by simply typing node index
+  Once the correct files have been installed the application is run by typing the command node index.js
 
   ## License
    ![GitHub License](https://img.shields.io/badge/MIT-Version-blue) 
@@ -24,10 +24,10 @@
   - [Click here](https://opensource.org/licenses/MIT) for more information on the license.
 
   ## Contribute
-  There is no contribution information necessary currently
+  There is no information necessary for contributing to this project.
 
   ## Testing
-  There is no testing information necessary currently
+  There is no testing information available at this time.
 
   ## Questions
 
